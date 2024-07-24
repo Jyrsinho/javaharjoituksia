@@ -2,32 +2,30 @@ package BinaryConverter;
 
 public class BinaryConverter {
 
-    int[] powersOfTwo = { 1, 2, 4, 8, 16, 32, 64, 128 };
-
 
     public BinaryConverter() {
     }
+
+
 
     /**
      * Converts given integer to 8bit binary String
      * @param integer number to be converted
      * @return 8bit binary string representing the binary value of a given integer
      */
-    public String convertToEightBitBinary(int integer) {
-
-
+    public String convertDecimalToBinary(int integer) {
+        if (integer == 0) return "0";
         StringBuilder binaryNumber = new StringBuilder();
 
-        for (int i = powersOfTwo.length-1; i >= 0; i--) {
-            if (powersOfTwo[i] <= integer) {
-                binaryNumber.append('1');
-                integer -= powersOfTwo[i];
+        while (integer > 0) {
+            if (integer % 2 == 0) {
+                binaryNumber.insert(0,"0");
             }
-            else {
-                binaryNumber.append('0');
-            }
+            else binaryNumber.insert(0,"1");
+            integer = integer / 2;
         }
 
-        return binaryNumber.toString();
+         return binaryNumber.toString();
+
     }
 }

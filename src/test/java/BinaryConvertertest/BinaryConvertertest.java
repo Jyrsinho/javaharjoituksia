@@ -21,32 +21,34 @@ public class BinaryConvertertest {
     @Test
     public void testShouldReturnZeroOneWhenGivenIntergerOne() {
 
-        assertEquals("00000001", binaryConverter.convertToEightBitBinary(1));
+        assertEquals("1", binaryConverter.convertDecimalToBinary(1));
     }
 
     @Test
     public void testShouldReturn0000000WhenGivenIntegerZero() {
-        assertEquals("00000000", binaryConverter.convertToEightBitBinary(0));
+        assertEquals("0", binaryConverter.convertDecimalToBinary(0));
 }
 
     @Test
     public void testShouldReturn00000010WhenGivenIntegerTwo() {
-        assertEquals("00000010", binaryConverter.convertToEightBitBinary(2));
+        assertEquals("10", binaryConverter.convertDecimalToBinary(2));
     }
 
     @Test
     public void testShouldReturn00000100WhenGivenIntegerFour() {
-        assertEquals("00000100", binaryConverter.convertToEightBitBinary(4));
+        assertEquals("100", binaryConverter.convertDecimalToBinary(4));
     }
 
     @Test
     public void testShouldReturn0000011WhenGivenIntegerThree() {
-        assertEquals("00000011", binaryConverter.convertToEightBitBinary(3));
+        assertEquals("11", binaryConverter.convertDecimalToBinary(3));
     }
 
     @Test
     public void testShouldReturn11111111henGivenInteger255() {
-        assertEquals("11111111", binaryConverter.convertToEightBitBinary(255));
+        assertEquals("11111111", binaryConverter.convertDecimalToBinary(255));
     }
+
+
 }
 
