@@ -54,6 +54,10 @@ public class BinaryConvertertest {
         assertEquals("10011100010000", binaryConverter.convertDecimalToBinary(10000));
     }
 
+    @Test
+    public void testShouldReturn8BitBinaryOfZero() {
+        assertEquals("0000 0000", binaryConverter.convertDecimalToBinary(0,8));
+    }
 
 }
 
