@@ -43,5 +43,10 @@ public class BinaryConvertertest {
     public void testShouldReturn0000011WhenGivenIntegerThree() {
         assertEquals("00000011", binaryConverter.convertToEightBitBinary(3));
     }
+
+    @Test
+    public void testShouldReturn11111111henGivenInteger255() {
+        assertEquals("11111111", binaryConverter.convertToEightBitBinary(255));
+    }
 }
 
