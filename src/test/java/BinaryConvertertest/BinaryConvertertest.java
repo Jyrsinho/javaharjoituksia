@@ -49,6 +49,11 @@ public class BinaryConvertertest {
         assertEquals("11111111", binaryConverter.convertDecimalToBinary(255));
     }
 
+    @Test
+    public void testShouldReturn10011100010000WhenGivenInteger10000() {
+        assertEquals("10011100010000", binaryConverter.convertDecimalToBinary(10000));
+    }
+
 
 }
 
