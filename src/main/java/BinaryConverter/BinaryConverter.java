@@ -80,6 +80,7 @@ public class BinaryConverter {
      * @return integer representation of a given binary number
      */
     public int convertBinaryToDecimal(String binaryNumber) {
+
         int decimalNumber = 0;
 
         for (int i = binaryNumber.length()-1, j=1; i >= 0; i--) {
@@ -87,6 +88,10 @@ public class BinaryConverter {
                 decimalNumber = decimalNumber + j;
             }
             j = j * 2;
+            // check that the binary String does not contain illegal values
+            if (binaryNumber.charAt(i) != '0' && binaryNumber.charAt(i) != '1' && binaryNumber.charAt(i) != ' ') {
+                return -1;
+            }
         }
 
         return decimalNumber;

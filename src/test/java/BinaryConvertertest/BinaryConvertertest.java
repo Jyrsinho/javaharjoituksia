@@ -84,5 +84,20 @@ public class BinaryConvertertest {
         assertEquals(2, binaryConverter.convertBinaryToDecimal("10"));
     }
 
+    @Test
+    public void testShouldReturnInteger255WhenGiven11111111() {
+        assertEquals(255, binaryConverter.convertBinaryToDecimal("11111111"));
+    }
+
+    @Test
+    public void testShouldHandleAlsoBinaryNumbersWithSpacing() {
+        assertEquals(10, binaryConverter.convertBinaryToDecimal("0000 1010"));
+    }
+
+    @Test
+    public void testShouldReturnNegativeNumberWhenBinaryStringContainsIllegalCharacters() {
+        assertEquals(-1, binaryConverter.convertBinaryToDecimal("11121111"));
+    }
+
 }
 
