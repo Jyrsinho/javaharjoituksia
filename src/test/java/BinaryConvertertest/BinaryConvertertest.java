@@ -59,5 +59,30 @@ public class BinaryConvertertest {
         assertEquals("0000 0000", binaryConverter.convertDecimalToBinary(0,8));
     }
 
+    @Test
+    public void testShouldDoProperSpacingFor16bitBinaryNumbers() {
+        assertEquals("0000 0000 0000 0000", binaryConverter.convertDecimalToBinary(0,16));
+    }
+
+    @Test
+    public void testShouldDoProperSpacingFor32bitBinaryNumbers() {
+        assertEquals("0000 0000 0000 0000 0000 0000 0000 0000", binaryConverter.convertDecimalToBinary(0,32));
+    }
+
+    @Test
+    public void testShouldReturnIntegerZeroWhenGiven0() {
+        assertEquals(0, binaryConverter.convertBinaryToDecimal("0"));
+    }
+
+    @Test
+    public void testShouldReturnIntegerOneWhenGiven1() {
+        assertEquals(1, binaryConverter.convertBinaryToDecimal("1"));
+    }
+
+    @Test
+    public void testShouldReturnIntegerTwoWhenGiven10() {
+        assertEquals(2, binaryConverter.convertBinaryToDecimal("10"));
+    }
+
 }
 

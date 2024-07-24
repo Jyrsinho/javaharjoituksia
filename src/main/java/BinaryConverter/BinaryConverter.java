@@ -46,6 +46,20 @@ public class BinaryConverter {
             integer = integer / 2;
         }
 
+        String formattedBinaryNumber = formatBinaryNumber(binaryNumber, bits);
+        return binaryNumber.toString();
+    }
+
+
+    /**
+     * Formats the binary number so that it has a proper number of zeros and adds a space between
+     * every fourth character
+     * @param binaryNumber to be formatted
+     * @param bits number of bits to be added
+     * @return properly formatted binarynumber
+     */
+    public String formatBinaryNumber(StringBuilder binaryNumber,int bits) {
+
         //add rest of the bits and spaces
         int numberOfZeros = bits - binaryNumber.length();
         for (int i = 0; i < numberOfZeros; i++) {
@@ -56,7 +70,19 @@ public class BinaryConverter {
             binaryNumber.insert(i," ");
             i += 4;
         }
-
         return binaryNumber.toString();
+    }
+
+
+    /**
+     * Converts binary numbers into decimals
+     * @param binaryNumber to be converted
+     * @return integer representation of a given binary number
+     */
+    public int convertBinaryToDecimal(String binaryNumber) {
+        if (binaryNumber.equals("0")) return 0;
+
+        return 1;
+
     }
 }
